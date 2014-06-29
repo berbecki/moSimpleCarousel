@@ -62,7 +62,7 @@ var MoSimpleCarousel = new Class({
 			});
 			if(vNav) {
 				var vertNav = new Element('div#vert-nav').inject(slideBox,'bottom');
-				(sliderModule-1).each(function(index,item){
+				sliderModule.each(function(index,item){
 					sliderPagPosition = -(slidersWidth * slidersElements)*index;
 					new Element('a.vert-nav-button',{
 						'data-position':-(slidersWidth * slidersElements)*index,
