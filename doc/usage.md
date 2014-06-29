@@ -26,3 +26,11 @@
 	});
 </script>
 ```
+# Options
+At this moment we have the following options: 
+-		sWidthOpt:160, 			// define one slider width
+-		sHeightOpt:160, 		// define carousel height
+-		sElementOpt:5,			// define carousels visible elements
+-		sOpt:'slider-list',		// define carousel 
+-		ssOpt:'li',				// define carousel name list 
+-		vNav:false				// enable or disable vertical navigation

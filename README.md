@@ -27,3 +27,4 @@ Call class MoSimpleCarousel with parametrs when document is ready:
 - add autoplay as option
 - add nonsymethric option
 - add infinity cycle as option
+- more intuitive options name
