@@ -2,10 +2,10 @@ var MoSimpleCarousel = new Class({
 	Implements: [Events, Options],
 	options:{
 		sWidthOpt:160, 			// define one slider width
-		sHeightOpt:160, 		// define slider height
-		sElementOpt:5,			// define sliders visible elements
-		sOpt:'slider-list',
-		ssOpt:'li',
+		sHeightOpt:160, 		// define carousel height
+		sElementOpt:5,			// define carousels visible elements
+		sOpt:'slider-list',		// define carousel 
+		ssOpt:'li',				// define carousel name list 
 		vNav:false				// enable or disable vertical navigation
     },
     initialize: function(options){
@@ -108,5 +108,9 @@ var MoSimpleCarousel = new Class({
 				});
 			}
 		}
+		
+		// TODO: add infinite slides
+		// TODO: add autoplay
+		// TODO: add multiple carousels on one site
 	}
 });

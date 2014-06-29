@@ -15,7 +15,13 @@ Call class MoSimpleCarousel with parametrs when document is ready:
 	});
 </script>
 ```
+[Usage - DOC](usage.md)
+
 ## Features
+[DEMO](http://webmastertips.pl/mosimplecarousel/index.html)
+
+- left/right pagination
+- optional vertical navigation
 
 ## TODO
 - add autoplay as option
