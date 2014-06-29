@@ -15,7 +15,7 @@ Call class MoSimpleCarousel with parametrs when document is ready:
 	});
 </script>
 ```
-[Usage - DOC](usage.md)
+[Usage - DOC](doc/usage.md)
 
 ## Features
 [DEMO](http://webmastertips.pl/mosimplecarousel/index.html)
