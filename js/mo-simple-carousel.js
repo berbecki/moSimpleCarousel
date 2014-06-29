@@ -6,7 +6,7 @@ var MoSimpleCarousel = new Class({
 		sElementOpt:5,			// define sliders visible elements
 		sOpt:'slider-list',
 		ssOpt:'li',
-		vNav:false
+		vNav:false				// enable or disable vertical navigation
     },
     initialize: function(options){
         this.setOptions(options);
@@ -67,13 +67,14 @@ var MoSimpleCarousel = new Class({
 					new Element('a.vert-nav-button',{
 						'data-position':-(slidersWidth * slidersElements)*index,
 						html:index+1,
-						href:'#',
+						href:'#'+(index+1),
 						events:{
 							click:function(event){
 								slider.morph({'left':-(slidersWidth * slidersElements)*index});
 								sliderPosition = -(slidersWidth * slidersElements)*index;
 								actButtons(sliderPosition, arrowLeft, arrowRight, sliderModulor);
 								event.stopPropagation();
+								event.preventDefault();
 							}
 						}
 					}).inject(vertNav);

@@ -3,10 +3,15 @@
     margin:30px auto 0;
 }
 
+#simple-slider {
+	margin-bottom:40px;
+}
+
 #slider-list {
     margin:0;padding:0;
     list-style-type: none;
 }
+
 #slider-list li {
     display:block;
     float:left
