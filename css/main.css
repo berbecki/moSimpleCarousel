@@ -16,3 +16,6 @@
 	-webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
 }
+#vert-nav {text-align:center;}
+#vert-nav a {display:inline-block;width:20px;height:20px;text-align:center;margin: 6px 1px;background: #f2f2f2;font-size:10px;line-height: 20px;text-decoration: none;color:#666;}
+#vert-nav a:hover, #vert-nav a.current {background:#dbdbdb;}

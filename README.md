@@ -19,6 +19,5 @@ Call class MoSimpleCarousel with parametrs when document is ready:
 
 ## TODO
 - add autoplay as option
-- add vertical navigation as option
 - add nonsymethric option
 - add infinity cycle as option
