@@ -7,9 +7,11 @@ Include MooTools library and MoSimpleCarousel Class:
 
 Call class MoSimpleCarousel with parametrs when document is ready:
 ```html
-$(window).addEvent('domready', function() {
-	var myCarousel = new MoSimpleCarousel({
-		sWidthOpt:160
+<script>
+	$(window).addEvent('domready', function() {
+		var myCarousel = new MoSimpleCarousel({
+			sWidthOpt:160
+		});
 	});
-});
+</script>
 ```
