@@ -1,9 +1,11 @@
 var MoSimpleCarousel = new Class({
 	Implements: [Events, Options],
 	options:{
-		sWidthOpt:160, 		// define one slider width
-		sHeightOpt:160, 	// define slider height
-		sElementOpt:5		// define sliders visible elements
+		sWidthOpt:160, 			// define one slider width
+		sHeightOpt:160, 		// define slider height
+		sElementOpt:5,			// define sliders visible elements
+		sOpt:'slider-list',
+		ssOpt:'li'
     },
     initialize: function(options){
         this.setOptions(options);
@@ -13,8 +15,8 @@ var MoSimpleCarousel = new Class({
 		var slidersWidth = this.options.sWidthOpt,
 			sliderHeight = this.options.sHeightOpt,
 			slidersElements = this.options.sElementOpt, 
-			slider = $('slider-list'),
-			sliders = slider.getElements('li'),
+			slider = $(this.options.sOpt),
+			sliders = slider.getElements(this.options.ssOpt),
 			sliderWidth = sliders.length * slidersWidth,
 			sliderModule = (sliders.length / slidersElements).toInt(),
 			arrowsBox,
@@ -36,7 +38,7 @@ var MoSimpleCarousel = new Class({
 
 			actButtons(sliderPosition, arrowLeft, arrowRight);
 
-			//actions
+			//actions when click
 			arrowLeft.addEvent('click', function(event) {
 				if (sliderPosition < 0) {
 					sliderPosition = sliderPosition + slidersWidth * slidersElements;
@@ -66,11 +68,4 @@ var MoSimpleCarousel = new Class({
 
 		}
 	}
-});
-
-
-$(window).addEvent('domready', function() {
-	var myCarousel = new MoSimpleCarousel({
-		sWidthOpt:160
-	});
 });

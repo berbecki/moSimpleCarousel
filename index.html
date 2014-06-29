@@ -8,10 +8,17 @@
         <title>Simple MooTools Carousel</title>
         <meta name="description" content="Simple carousel for MooTools">
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/mootools-core-1.5.0-full-compat-yc.js"></script>
         <script src="js/mo-simple-carousel.js"></script>
+        <script>
+        	$(window).addEvent('domready', function() {
+				var myCarousel = new MoSimpleCarousel({
+					sWidthOpt:160
+				});
+			});
+        </script>
     </head>
     <body>
         <div id="content">
@@ -66,6 +73,7 @@
             	</article>
             </section>
             <footer id="footer">
+            	<hr/>
             	<p>
 					<small>Created 2014 by jb</small>
 				</p>

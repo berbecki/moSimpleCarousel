@@ -1,3 +1,5 @@
 ## Quick start
 ## Features
-## Documentation
+## TODO
+- add autoplay
+- add vertical navigation
