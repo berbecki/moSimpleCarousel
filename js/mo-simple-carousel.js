@@ -6,7 +6,9 @@ var MoSimpleCarousel = new Class({
 		sElementOpt:5,			// define carousels visible elements
 		sOpt:'slider-list',		// define carousel 
 		ssOpt:'li',				// define carousel name list 
-		vNav:false				// enable or disable vertical navigation
+		vNav:false,	     		// enable or disable vertical navigation
+		autoPlay:true,          // enable autoplay
+        autoPlayInterval:3000   // set autoplay interval
     },
     initialize: function(options){
         this.setOptions(options);
@@ -20,12 +22,15 @@ var MoSimpleCarousel = new Class({
 			sliders = slider.getElements(this.options.ssOpt),
 			sliderWidth = sliders.length * slidersWidth,
 			sliderModule = (sliders.length / slidersElements).toInt(),
+			rotate,
 			arrowsBox,
 			arrowLeft,
 			arrowRight,
 			sliderPosition,
 			sliderPagPosition,
-			vNav = this.options.vNav;
+			vNav = this.options.vNav,
+			autoPlay = this.options.autoPlay,
+            autoPlayInterval = this.options.autoPlayInterval;
 		var sliderWrapper = new Element('div#slider-wrapper').wraps(slider);
 		var slideBox = new Element('div#slider-box').setStyles({'height' : sliderHeight, 'position' : 'relative'}).wraps(sliderWrapper);
 		if (sliders.length % slidersElements != 0) {sliderModule = sliderModule + 1;}
@@ -85,6 +90,32 @@ var MoSimpleCarousel = new Class({
 			}
 		}
 		
+		//autoplay if autoplay enebled
+        if(autoPlay) {
+            function rotateSlider() {
+                rotate = setInterval(function () {
+                    if (sliderPosition > -sliderModulor) {
+                        sliderPosition = sliderPosition + -slidersWidth * slidersElements;
+                        slider.morph({'left': sliderPosition});
+                        actButtons(sliderPosition, arrowLeft, arrowRight, sliderModulor);
+                    } else {
+                        sliderPosition = 0;
+                        slider.morph({'left': sliderPosition});
+                        actButtons(sliderPosition, arrowLeft, arrowRight, sliderModulor);
+                    }
+                }, autoPlayInterval);
+            }
+            rotateSlider();
+            slideBox.addEvent('mouseover',function(event){
+                clearInterval(rotate);
+                event.stopPropagation();
+            });
+            slideBox.addEvent('mouseout',function(event){
+                rotateSlider();
+                event.stopPropagation();
+            });
+        }
+		
 		function actButtons(sliderPosition, arrowLeft, arrowRight, sliderModulor) {
 			var vertNavElements = $$('a.vert-nav-button');
 			
@@ -110,7 +141,7 @@ var MoSimpleCarousel = new Class({
 		}
 		
 		// TODO: add infinite slides
-		// TODO: add autoplay
+		// TODO: [x]add autoplay
 		// TODO: add multiple carousels on one site
 	}
 });
