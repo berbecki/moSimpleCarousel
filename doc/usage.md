@@ -34,3 +34,5 @@ At this moment we have the following options:
 -		sOpt:'slider-list',		// define carousel 
 -		ssOpt:'li',				// define carousel name list 
 -		vNav:false				// enable or disable vertical navigation
+-		autoPlay:true,          // enable autoplay
+-       autoPlayInterval:3000   // set autoplay interval
