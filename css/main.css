@@ -5,6 +5,9 @@
 
 #simple-slider {
 	margin-bottom:40px;
+    background:#ccc;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
 }
 
 #slider-list {
@@ -17,10 +20,12 @@
     float:left
 }
 
-#simple-slider {
-	-webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
-	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+#slider-list li img {
+    max-width:100% !important;
+    height:auto;
+    display:block;
 }
-#vert-nav {text-align:center;}
+
+#vert-nav {text-align:center;position:absolute;bottom:-38px;width:100%;}
 #vert-nav a {display:inline-block;width:20px;height:20px;text-align:center;margin: 6px 1px;background: #f2f2f2;font-size:10px;line-height: 20px;text-decoration: none;color:#666;}
 #vert-nav a:hover, #vert-nav a.current {background:#dbdbdb;}

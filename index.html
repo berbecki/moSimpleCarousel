@@ -1,91 +1,87 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <title>Simple MooTools Carousel</title>
-        <meta name="description" content="Simple carousel for MooTools">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Simple MooTools Carousel</title>
+    <meta name="description" content="Simple carousel for MooTools">
 
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/mootools-core-1.5.0-full-compat-yc.js"></script>
-        <script src="js/mo-simple-carousel.js"></script>
-        <script>
-        	$(window).addEvent('domready', function() {
-				var myCarousel = new MoSimpleCarousel({
-					sWidthOpt:160,
-					sElementOpt:5,
-					vNav:true
-				});
-			});
-        </script>
-    </head>
-    <body>
-        <div id="content">
-            <header id="header">
-            	<h2>Simple MooTools Carousel</h2>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/mootools-core-1.5.0-full-compat-yc.js"></script>
+    <script src="js/mo-simple-carousel.js"></script>
+    <script>
+        $(window).addEvent('domready', function () {
+            var myCarousel = new MoSimpleCarousel({
+                sWidthOpt: 960,
+                sHeightOpt: 233,
+                sElementOpt: 1,
+                autoPlayInterval: 6000,
+                vNav: true
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="content">
+    <header id="header">
+        <h2>Simple MooTools Carousel</h2>
+    </header>
+    <div id="simple-slider" class="clearfix">
+        <ul id="slider-list">
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+            <li><a href="#"><img src="http://placekitten.com/g/960/280"></a></li>
+        </ul>
+    </div>
+    <section>
+        <article>
+            <p class="lead">Simple MooTools Carousel is a small (comp. only 3kB !) and simple carousel class prepared
+                for MooTools framework.</p>
+            <hr/>
+            <a class="btn btn-default btn-sm" href="https://github.com/berbecki/moSimpleCarousel">GitHub</a>
+            <a class="btn btn-default btn-sm" href="http://webmastertips.pl/mosimplecarousel/index.html">Demo</a>
+            <hr/>
+            <header>
+                <h3>Usage</h3>
             </header>
-            <div id="simple-slider" class="clearfix">
-                <ul id="slider-list">
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                    <li><a href="#"><img src="http://placekitten.com/g/160/160"></a></li>
-                </ul>
-            </div>
-            <section>
-            	<article>
-            		<p class="lead">Simple MooTools Carousel is a small (comp. only 3kB !) and simple carousel class prepared for MooTools framework.</p>
-            		<hr/>
-            			<a class="btn btn-default btn-sm" href="https://github.com/berbecki/moSimpleCarousel">GitHub</a> 
-            			<a class="btn btn-default btn-sm" href="http://webmastertips.pl/mosimplecarousel/index.html">Demo</a>
-            		<hr/>
-            		<header>
-            			<h3>Usage</h3>
-            		</header>
-            		<div>
-            		<p><strong>1.</strong> Include MooTools library and MoSimpleCarousel Class:</p>
+            <div>
+                <p><strong>1.</strong> Include MooTools library and MoSimpleCarousel Class:</p>
 <pre><code>&lt;script src="js/vendor/mootools-core-1.5.0-full-compat-yc.js">&lt;/script>
 &lt;script src="js/mo-simple-carousel.js">&lt;/script>
 </code></pre>
-            		<p><strong>2.</strong> Prepare your HTML code structure.</p>
+                <p><strong>2.</strong> Prepare your HTML code structure.</p>
 <pre><code>&lt;ul id="slider-list">
-	...
-	&lt;li>&lt;a href="#yourLink">&lt;img src="http://placekitten.com/g/160/160/#yourImage">...&lt;/a>&lt;/li>
-	...
+...
+&lt;li>&lt;a href="#yourLink">&lt;img src="http://placekitten.com/g/160/160/#yourImage">...&lt;/a>&lt;/li>
+...
 &lt;/ul>
 </code></pre>
-            		<p><strong>3.</strong> Call class MoSimpleCarousel with parametrs when document is ready:</p>
+                <p><strong>3.</strong> Call class MoSimpleCarousel with parametrs when document is ready:</p>
 <pre><code>$(window).addEvent('domready', function() {
-	var myCarousel = new MoSimpleCarousel({
-		sWidthOpt:160
-	});
+    var myCarousel = new MoSimpleCarousel({
+        sWidthOpt:160
+    });
 });
 </code></pre>
-            		</div>
-            	</article>
-            </section>
-            <footer id="footer">
-            	<hr/>
-            	<p>
-					<small>Created 2014 by jb</small>
-				</p>
-			</footer>
-        </div>
-    </body>
+            </div>
+        </article>
+    </section>
+    <footer id="footer">
+        <hr/>
+        <p>
+            <small>Created 2014 by jb</small>
+        </p>
+    </footer>
+</div>
+</body>
 </html>
